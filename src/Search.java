@@ -1,7 +1,20 @@
 import java.util.ArrayList;
+/**
+ * Search algorithm
+ * @author L02-13
+ *
+ */
 
 public class Search {
 	
+	/**
+	 * Binary search for games
+	 * @param games array list of game
+	 * @param l left index
+	 * @param r right index
+	 * @param s wanted game
+	 * @return index of the game, -1 if not found
+	 */
 	// Returns index of x if it is present in ArrayList<Game> else return -1 
     public static int binarySearch(ArrayList<Game> games, int l, int r, String s) 
     { 

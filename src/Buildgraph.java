@@ -5,9 +5,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
+/**
+ * Build the graph
+ * @author L02-13
+ *
+ */
 public class Buildgraph {
 	
+	/**
+	 * Generate the graph
+	 * @param gameMap hashmap for games
+	 * @param playerMap hashmap for player
+	 * @param games array list for games
+	 * @param players array list of players
+	 * @return player-game graph
+	 * @throws Exception
+	 */
 	//graph
 	public static Graph GameGraph(HashMap<String, Integer> gameMap, HashMap<String, Integer> playerMap, ArrayList<Game> games, ArrayList<Player> players) throws Exception {
 
@@ -54,6 +67,13 @@ public class Buildgraph {
 		return g;
 	}
 	
+	/**
+	 * add a player into the graph
+	 * @param g existing graph
+	 * @param user Player
+	 * @param gameMap hashmap for games
+	 * @throws IOException
+	 */
 	public static void addPlayer(Graph g, Player user, HashMap<String, Integer> gameMap) throws IOException {
 		ArrayList<String> games = user.getPurchased();
 		BufferedWriter bw = new BufferedWriter(new FileWriter("data/error.txt", true));

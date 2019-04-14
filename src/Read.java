@@ -1,10 +1,19 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-
+/**
+ *  Read data from file
+ * @author L02-13
+ *
+ */
 public class Read {
 	
 	//read game information
+	/**
+	 * read game information
+	 * @return arraylist of games
+	 * @throws Exception file doesn't exit
+	 */
 	public static ArrayList<Game> readGame() throws Exception {
 		ArrayList<Game> games = new ArrayList<>();
 		BufferedReader br = new BufferedReader(new FileReader("data/games.csv"));
@@ -17,6 +26,11 @@ public class Read {
 		return games;
 	}
 	
+	/**
+	 * read player information
+	 * @return arraylist of player
+	 * @throws Exception file doesn't exit
+	 */
 	//read player information
 	public static ArrayList<Player> readPlayer() throws Exception {
 		ArrayList<Player> players = new ArrayList<>();
@@ -29,6 +43,11 @@ public class Read {
 		return players;
 	}
 	
+	/**
+	 * parse an input string into separate elements
+	 * @param s 
+	 * @return an arraylist of string elements
+	 */
 	//separate a line in a csv into string token
 	public static ArrayList<String> getElements(String s) {
 		

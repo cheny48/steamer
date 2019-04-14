@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * @author L02-13
+ * ADT for Game
+ */
+
 public class Game implements Comparable<Game>{
 	
 	private final String name;
@@ -23,6 +28,11 @@ public class Game implements Comparable<Game>{
 		this.price = Double.parseDouble(elements.get(14))/100;
 	}
 	
+	/**
+	 * 
+	 * @param s string for game name
+	 * @param price double for game price
+	 */
 	public Game(String s, double price) {
 		this.name = s;
 		this.price = price;
@@ -30,19 +40,34 @@ public class Game implements Comparable<Game>{
 		this.positive = 0;
 	}
 	
+	/**
+	 * 
+	 * @return return game name
+	 */
 	public String getName() {
 		return this.name;
 	}
 	
+	/**
+	 * 
+	 * @return return game price
+	 */
 	public double getPrice() {
 		return this.price;
 	}
 	
+	/**
+	 * 
+	 * @return return positive rate
+	 */
 	public double positiveRate() {
 		return ((double)this.positive/(this.positive + this.negative))*100;
 	}
 
 	@Override
+	/**
+	 *  compareTo override
+	 */
 	public int compareTo(Game o) {
 		if (this.name.compareTo(o.getName())< 0){
 			return -1;

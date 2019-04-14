@@ -1,7 +1,18 @@
 import java.util.ArrayList;
 
+/**
+ * graph algorithm, predict the games potential play time according to user similarity 
+ * @author mac
+ *
+ */
 public class GraphAlgo {
 	
+	/**
+	 * 
+	 * @param g Graph
+	 * @param games array list of games
+	 * @return double array of predict relative playing time for each game 
+	 */
 	public static double[] collaborative(Graph g, ArrayList<Game> games) {
 		double[] gamePlay = new double[games.size()];
 		

@@ -5,7 +5,11 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-
+/**
+ * Client
+ * @author L02-13
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) throws Exception {
@@ -147,7 +151,10 @@ public class Main {
 		System.out.println(games.get(sorted[sorted.length - 5]).getName());*/
 		
 	}
-	
+	/**
+	 * print information of Game in an arraylist
+	 * @param games arraylist of games
+	 */
 	public static void printGame(ArrayList<Game> games) {
 		for(int i = 0; i < games.size(); i++) {
 			System.out.println(i+1 + " recommendation is " +games.get(i).getName());
@@ -155,6 +162,13 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * recommendation function
+	 * @param newGraph completed graph
+	 * @param games arraylist of games
+	 * @param user Player built for user input
+	 * @return Array list of recommended game
+	 */
 	public static ArrayList<Game> recommend(Graph newGraph, ArrayList<Game> games, Player user){
 		ArrayList<Game> temp = new ArrayList<Game>();
 		double[] result = GraphAlgo.collaborative(newGraph, games);

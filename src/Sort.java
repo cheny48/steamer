@@ -1,6 +1,15 @@
-
+/**
+ * Sort algorithm
+ * @author L02-13
+ *
+ */
 public class Sort {
 	
+	/**
+	 * 
+	 * @param games double array from collaborative
+	 * @return sorted int array of game index
+	 */
 	public static int[] sort(double[] games){
 		int[] index = new int[games.length];
 		for(int i = 0; i < games.length; i++) {
